@@ -1,0 +1,16 @@
+.env
+.env.*
+*.log
+*.err
+*.crx
+*.xpi
+*.pem
+*.key
+*password*
+*credential*
+*secret*
+extension-update/
+firefox-extension/
+dist/
+__pycache__/
+*.pyc

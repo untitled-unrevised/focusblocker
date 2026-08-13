@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FocusBlocker</title>
+  <style>
+    :root { color-scheme: light dark; font: 14px system-ui, sans-serif; }
+    body { margin: 0; padding: 16px; width: 300px; }
+    h1 { font-size: 18px; margin: 0 0 12px; }
+    form { display: flex; gap: 8px; }
+    input { box-sizing: border-box; flex: 1; min-width: 0; padding: 8px; }
+    button { cursor: pointer; padding: 8px 10px; }
+    ul { list-style: none; margin: 16px 0 0; padding: 0; }
+    li { align-items: center; display: flex; gap: 8px; margin-top: 8px; }
+    li span { flex: 1; overflow-wrap: anywhere; }
+    #empty { color: #777; margin-top: 16px; }
+  </style>
+</head>
+<body>
+  <h1>Blocked sites</h1>
+  <form id="add-form">
+    <input id="domain" type="text" inputmode="url" placeholder="example.com" aria-label="Domain" required>
+    <button type="submit">Block site</button>
+  </form>
+  <p id="empty">No sites are blocked.</p>
+  <ul id="domains" aria-live="polite"></ul>
+  <script src="popup.js"></script>
+</body>
+</html>
